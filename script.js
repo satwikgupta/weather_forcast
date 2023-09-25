@@ -14,13 +14,21 @@ async function fetchData(city) {
 		const result = await response.json();
 		console.log(result);
 
-		CO.innerHTML = result.CO.concentration
-		NO2.innerHTML = result.NO2.concentration
-		O3.innerHTML = result.O3.concentration
-		SO2.innerHTML = result.SO2.concentration
-		PM2.innerHTML = result["PM2.5"].concentration
-		PM10.innerHTML = result.PM10.concentration
-		overall_aqi.innerHTML = result.overall_aqi
+		CO_concentration.innerHTML = result.CO.concentration
+		NO2_concentration.innerHTML = result.NO2.concentration
+		O3_concentration.innerHTML = result.O3.concentration
+		SO2_concentration.innerHTML = result.SO2.concentration
+		PM2_concentration.innerHTML = result["PM2.5"].concentration
+		PM10_concentration.innerHTML = result.PM10.concentration
+		
+		
+		CO_aqi.innerHTML = result.CO.aqi
+		NO2_aqi.innerHTML = result.NO2.aqi
+		O3_aqi.innerHTML = result.O3.aqi
+		SO2_aqi.innerHTML = result.SO2.aqi
+		PM2_aqi.innerHTML = result["PM2.5"].aqi
+		PM10_aqi.innerHTML = result.PM10.aqi
+		Overall_aqi.innerHTML = result.overall_aqi
 	  
 
 

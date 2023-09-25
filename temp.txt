@@ -1,8 +1,6 @@
-
-  CO = response.CO
-  NO2 = response.NO2
-  O3 = response.O3
-  SO2 = response.SO2
-  PM2.5 = response.PM2.5
-  PM10 = response.PM10
-  overall_aqi = response.overall_aqi
+CO_aqi.innerHTML = result.CO.aqi
+		NO2_aqi.innerHTML = result.NO2.aqi
+		O3_aqi.innerHTML = result.O3.aqi
+		SO2_aqi.innerHTML = result.SO2.aqi
+		PM2_aqi.innerHTML = result["PM2.5"].aqi
+		PM10_aqi.innerHTML = result.PM10.aqi
