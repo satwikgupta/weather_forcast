@@ -1,0 +1,8 @@
+
+  CO = response.CO
+  NO2 = response.NO2
+  O3 = response.O3
+  SO2 = response.SO2
+  PM2.5 = response.PM2.5
+  PM10 = response.PM10
+  overall_aqi = response.overall_aqi
