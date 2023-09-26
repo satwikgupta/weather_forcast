@@ -27,7 +27,7 @@
             Cities
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Dehli</a></li>
+            <li><a class="dropdown-item" href="#">Delhi</a></li>
             <li><a class="dropdown-item" href="#">Varanasi</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Kolkata</a></li>
@@ -38,7 +38,7 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" autocomplete="off" id="city" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" autocomplete="off" id="city" type="search" placeholder="City Name" aria-label="Search">
         <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
       </form>
     </div>
@@ -49,8 +49,63 @@
 <div class="container align-items-center justify-content-center">
   <h1 class="ny-4 text-center ">Weather for <span id="cityname"></span></h1>
   <br>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm border-warning ">
+        <div class="card-header py-3 text-bg-warning border-warning ">
+          <h4 class="my-0 fw-normal">Temperatures</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title"><span id="temp"></span><small class="text-body-secondary fw-light">℃</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Feels Like <span id="feels_like"></span></li>
+            <li>Max Temp is <span id="max_temp"></span></li>
+            <li>Min Temp is <span id="min_temp"></span></li>
+            
+          </ul>
+          <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+        <div class="card-header py-3 text-bg-secondary border-secondary">
+          <h4 class="my-0 fw-normal">Humidity</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light">%</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Humidity is <span id="humidity"></span>%</li>
+            <li>Sunrise time is <span id="sunrise"></span> AM</li>
+            <li>Sunset time is <span id="sunset"></span> PM</li>
+
+          </ul>
+          <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm border-primary">
+        <div class="card-header py-3 text-bg-primary border-primary">
+          <h4 class="my-0 fw-normal">Wind Info</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small class="text-body-secondary fw-light"> km/h</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Wind degrees is <span id="wind_degrees"></span></li>
+            <li>Air Quality Index is <span id="Overall_aqi"></span></li>
+            <li>Cloud PCT is <span id="cloud_pct"></span></li>
+            
+          </ul>
+          <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main class="">
-    <table class="table table-striped table-sm" style="width: 80%; margin: auto;">
+    <table class="table table-striped table-sm" style="margin: auto">
       <thead>
         <tr>
           <th scope="col">Parameters</th>
@@ -96,13 +151,13 @@
           <td><span id="PM10_aqi"></span></td>
           
         </tr>
-        <tr>
+        <!-- <tr>
           <td>Overall</td>
           <td></td>
           <td><span id="Overall_aqi"></span></td>
           
         
-        <tr>
+        <tr> -->
       </tbody>
     </table>
 
@@ -115,69 +170,54 @@
         <thead>
           <tr>
             <th style="width: 12%;"></th>
-            <th style="width: 12%;">CO</th>
-            <th style="width: 12%;">NO2</th>
-            <th style="width: 12%;">O3</th>
-            <th style="width: 12%;">SO2</th>
-            <th style="width: 12%;">PM2.5</th>
-            <th style="width: 12%;">PM10</th>
-            <th style="width: 12%;">overall_aqi</th>
+            <th style="width: 12%;">Temperature</th>
+            <th style="width: 12%;">Humidity</th>
+            <th style="width: 12%;">Sunrise</th>
+            <th style="width: 12%;">Sunset</th>
+            <th style="width: 12%;">Wind Speed</th>
+            <!-- <th style="width: 12%;">AQI</th> -->
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row" class="text-start">Mumbai</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td><span id="mum_temp"></span></td>
+            <td><span id="mum_hum"></span></td>
+            <td><span id="mum_sunrise"></span></td>
+            <td><span id="mum_sunset"></span></td>
+            <td><span id="mum_wind"></span></td>
+            
+          </tr>
+          
+          <tr>
+            <th scope="row" class="text-start">Kolkata</th>
+            <td><span id="kol_temp"></span></td>
+            <td><span id="kol_hum"></span></td>
+            <td><span id="kol_sunrise"></span></td>
+            <td><span id="kol_sunset"></span></td>
+            <td><span id="kol_wind"></span></td>
+          
           </tr>
           <tr>
             <th scope="row" class="text-start">Bengaluru</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td><span id="beng_temp"></span></td>
+            <td><span id="beng_hum"></span></td>
+            <td><span id="beng_sunrise"></span></td>
+            <td><span id="beng_sunset"></span></td>
+            <td><span id="beng_wind"></span></td>
+        
           </tr>
-        </tbody>
-
-        <tbody>
+        
           <tr>
             <th scope="row" class="text-start">Chennai</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td><span id="chen_temp"></span></td>
+            <td><span id="chen_hum"></span></td>
+            <td><span id="chen_sunrise"></span></td>
+            <td><span id="chen_sunset"></span></td>
+            <td><span id="chen_wind"></span></td>
+            
           </tr>
-          <tr>
-            <th scope="row" class="text-start">Delhi</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Kolkata</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>
@@ -185,9 +225,27 @@
 </div>
 
 
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-success">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <i class="fa-solid fa-cloud" style="color: #505c95;"></i>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">Made by Satwik</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>
+</div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
