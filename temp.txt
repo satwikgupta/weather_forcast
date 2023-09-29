@@ -1,6 +1,10 @@
-CO_aqi.innerHTML = result.CO.aqi
-		NO2_aqi.innerHTML = result.NO2.aqi
-		O3_aqi.innerHTML = result.O3.aqi
-		SO2_aqi.innerHTML = result.SO2.aqi
-		PM2_aqi.innerHTML = result["PM2.5"].aqi
-		PM10_aqi.innerHTML = result.PM10.aqi
+cloud_pct.innerHTML = result2.cloud_pct.
+feels_like.innerHTML = result2.feels_like.
+humidity.innerHTML = result2.humidity.
+max_temp.innerHTML = result2.max_temp.
+min_temp.innerHTML = result2.min_temp.
+sunrise.innerHTML = result2.sunrise.
+sunset.innerHTML = result2.sunset.
+temp.innerHTML = result2.temp.
+wind_degrees.innerHTML = result2.wind_degrees.
+wind_speed.innerHTML = result2.wind_speed.
