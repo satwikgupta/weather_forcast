@@ -16,28 +16,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item dropdown">
+        </li> -->
+        <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Cities
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Delhi</a></li>
-            <li><a class="dropdown-item" href="#">Varanasi</a></li>
+            <li><a class="dropdown-item" role="button" id="topDelhi">Delhi</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Kolkata</a></li>
+            <li><a class="dropdown-item" role="button" id="topVaranasi">Varanasi</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" role="button" id="topKolkata">Kolkata</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-disabled="true"><i class="fa-solid fa-cloud" style="color: #505c95;"></i></a>
-        </li>
       </ul>
-      <form class="d-flex" role="search">
+        <form class="d-flex" role="search">
+          <div class="align-content-center justify-content-center d-flex text-center m-2">
+            <i class="fa-solid fa-cloud" style="color: #505c95;"></i>
+          </div>
         <input class="form-control me-2" autocomplete="off" id="city" type="search" placeholder="City Name" aria-label="Search">
         <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
       </form>

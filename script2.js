@@ -45,8 +45,20 @@ submit.addEventListener('click', (e)=>{
 	e.preventDefault();
 	fetchData1(city.value);
 })
-
 fetchData1("Delhi");
+
+document.getElementById("topDelhi").addEventListener('click', ()=>{
+    fetchData1("Delhi");
+})
+document.getElementById("topVaranasi").addEventListener('click', ()=>{
+    fetchData1("varanasi");
+})
+
+document.getElementById("topKolkata").addEventListener('click', ()=>{
+    fetchData1("kolkata");
+})
+
+
 
 
 
