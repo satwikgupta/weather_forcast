@@ -51,11 +51,11 @@ document.getElementById("topDelhi").addEventListener('click', ()=>{
     fetchData1("Delhi");
 })
 document.getElementById("topVaranasi").addEventListener('click', ()=>{
-    fetchData1("varanasi");
+    fetchData1("Varanasi");
 })
 
 document.getElementById("topKolkata").addEventListener('click', ()=>{
-    fetchData1("kolkata");
+    fetchData1("Kolkata");
 })
 
 
