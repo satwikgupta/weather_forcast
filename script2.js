@@ -43,7 +43,7 @@ async function fetchData1(city) {
 
 submit.addEventListener('click', (e)=>{
 	e.preventDefault();
-	fetchData1(city.value);
+    city.value && fetchData1(city.value);
 })
 fetchData1("Delhi");
 

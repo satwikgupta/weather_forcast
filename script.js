@@ -39,7 +39,10 @@ async function fetchData(city) {
 
 submit.addEventListener('click', (e)=>{
 	e.preventDefault();
-	fetchData(city.value);
+	if(city.value)
+		fetchData(city.value);
+	// else 
+	// 	error_city = "Not a valid City name"
 })
 
 fetchData("Delhi");
